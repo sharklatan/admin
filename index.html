@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>User Login Admin</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- Include CSS File Here -->
+<link rel="stylesheet" href="css/style.css"/>
+<!-- Include JS File Here -->
+<script src="js/login.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="main">
+<h2>Login IPA Signer</h2>
+<form id="form_id" method="post" name="myform">
+<label>User Name :</label>
+<input type="text" name="username" id="username"/>
+<label>Password :</label>
+<input type="password" name="password" id="password"/>
+<input type="button" value="Login" id="submit" onclick="validate()"/>
+</form>
+<span><b class="note">Note : </b> When you visit our Site, we can access and collect the IP address of the device you use to connect to the Internet. <br/><b class="valid"> <div id="footer"></div>
+<script>
+var getIP = function(json) {
+  document.getElementById("footer").innerHTML = json.ip;
+}
+</script>
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP">
+</script> </b></span>
+</div>
+</div>
+</body>
+</html>

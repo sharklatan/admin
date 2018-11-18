@@ -1,0 +1,199 @@
+<html>
+<head>
+<title>IPAS Links</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<meta http-equiv="content-type" content="text/html">
+	<meta name="SharkApp" content="IPAS">
+
+	<title>Recargar un elemento sin recargar con jquery </title>
+    <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+ <script type="text/javascript">
+    $(document).ready(function() {
+    //Ejemplo 1
+    $("#boton").click(function(event) {
+        $("#htmlext").load('ejemplo1.html');
+    });
+    
+    //Ejemplo 2
+    $("#boton2").click(function(event) {
+        $("#htmlext2").load('ejemplo1.html div#cargar-soloesto');
+    });
+    
+    //Ejemplo 3
+    $("#boton3").click(function(event) {
+        $("#phpextget").load('ejemplo2.php',{
+            'var1':'Valor 1',
+            'var2':'Valor 2'
+            });   
+    });
+    
+    //Reiniciar contenido
+    $(".reiniciar").click(function(){
+        $(this).next('.recargar').html('Aqui se cargará el contenido');
+    });
+    });
+ </script>
+ <style>
+ body{font-family:Arial, serif;}
+ .ejemplo{clear:both}
+ </style>
+</head>
+<body>
+<div class="ejemplo">
+    <h2>Cargar un html o php externo</h2>
+    <input type="button" id="boton" value="Cargar html externo"> <input type="button" value="Reiniciar" class="reiniciar">
+    <div id="htmlext" class="recargar">
+
+
+	<meta http-equiv="content-type" content="text/html">
+	<meta name="author" content="Daniel Manchego">
+
+	<title>Efectos Hover en CSS3, para imagenes con titulos y descripciones</title>
+ <style>
+ 
+ body{font-family: Arial,serif;}
+ .clear{width:100%;clear:both;}
+ 
+ 
+ 
+/*Estilos Base*/
+.contenedor-img {
+    width: 300px;
+    height: 200px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+    background: #fff;
+}
+    .contenedor-img .mascara,.contenedor-img .contenido {
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0
+    }
+    .contenedor-img img {
+        display: block;
+        position: relative;
+       
+    }
+    .contenedor-img h2 {
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        font-size: 17px;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.9);
+        margin: 20px 0 0 0
+    }
+    .contenedor-img p {    
+        font-size: 12px;
+        position: relative;
+        color: #fff;
+        padding: 10px 20px 10px;
+        text-align: center
+    }
+    .contenedor-img a.link {
+        display: inline-block;
+        text-decoration: none;
+        padding: 7px 14px;
+        background: #222;
+        color: #fff;
+        text-transform: uppercase;
+        box-shadow: 0 0 1px #000
+    }
+        .contenedor-img a.link:hover {
+            box-shadow: 0 0 5px #000
+        }
+        
+     
+/*Ejemplo 1*/
+.ejemplo-1 img { 
+    transition: all 0.2s linear;
+}
+.ejemplo-1 .mascara {
+    opacity: 0;
+    background-color: rgba(46,157,120, 0.7); 
+    transition: all 0.3s ease-in-out;
+}
+    .ejemplo-1 h2 {
+        transform: translateX(-200px);
+        opacity: 0;
+        transition: all 0.7s ease-in-out;
+    }
+    .ejemplo-1 p { 
+        transform: translateX(200px);
+        opacity: 0;
+    	transition: all 0.4s linear;
+    }
+    .ejemplo-1 a.link{
+        opacity: 0;
+    	transition: all 0.4s ease-in-out;
+        transform: translateY(100px)
+    }
+    .ejemplo-1:hover img { 
+    	transform: scale(1.1);
+    } 
+    .ejemplo-1:hover .mascara { 
+    	opacity: 1;
+    }
+    .ejemplo-1:hover h2,
+    .ejemplo-1:hover p,
+    .ejemplo-1:hover a.link {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    .ejemplo-1:hover p {
+        transition-delay: 0.1s;
+    }
+    .ejemplo-1:hover a.link {
+        transition-delay: 0.2s;
+        transform: translateY(0px);
+    }
+
+ </style>
+
+ 
+<div class="contenedor-img ejemplo-1">  
+     <img src="imgejemplo.jpg">  
+     <div class="mascara" id="cargar-soloesto">  
+         <h2>Ejemplo 1</h2>  
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae tortor diam  in ullamcorper malesuada.</p>
+         <a href="#" class="link">Leer mas</a>  
+     </div>  
+</div>
+ 
+</div>
+</div>
+
+<div class="ejemplo">
+    <h2>Cargar un html o php externo y obtener un contenido especifico</h2>
+    <input type="button" id="boton2" value="Cargar html externo"> <input type="button" value="Reiniciar" class="reiniciar">
+    <div id="htmlext2" class="recargar">Aqui se cargará el contenido</div>
+</div>
+
+<div class="ejemplo">
+    <h2>Cargar un php externo y mandar variables</h2>
+    <input type="button" id="boton3" value="Cargar php"> <input type="button" value="Reiniciar" class="reiniciar">
+    <div id="phpextget" class="recargar">
+            Aqui se cargará el contenido
+    </div>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

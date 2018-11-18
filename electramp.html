@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>IPAS Links</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+</head>
+<body>
+
+
+<script>
+
+var url = "https://api.tweakbox.pro/tweakbox/electra-1131-multipathproper";
+
+var uncover = "https://api.tweakbox.pro/tweakbox/unc0ver-jailbreak-ios-110-114b3";
+
+
+var xmlHttp = new XMLHttpRequest();
+
+xmlHttp.onreadystatechange = function() {
+  if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+
+
+    document.getElementById('ipa').innerHTML = JSON.parse(xmlHttp.responseText).data.TBAppUrl + "<p>";
+
+}
+
+xmlHttp.open("GET", url, true);
+
+xmlHttp.send();
+
+
+
+</script>
+
+</b>ipa link: <p>
+<div id="ipa"></div>
+
+
+
+
+</body>
+</html>
