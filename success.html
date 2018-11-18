@@ -1,5 +1,5 @@
-<html>
-<head>
+
+<html><head>
 <title>IPAS Links</title>
 
 <meta charset="utf-8">
@@ -10,28 +10,21 @@
 	<meta http-equiv="content-type" content="text/html">
 	<meta name="SharkApp" content="IPAS">
 
-	<title>Recargar un elemento sin recargar con jquery </title>
-    <script   src="https://code.jquery.com/jquery-1.11.2.min.js"   integrity="sha256-Ls0pXSlb7AYs7evhd+VLnWsZ/AqEHcXBeMZUycz/CcA="   crossorigin="anonymous"></script>
+	<title>API</title>
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js" integrity="sha256-Ls0pXSlb7AYs7evhd+VLnWsZ/AqEHcXBeMZUycz/CcA=" crossorigin="anonymous"></script>
  <script type="text/javascript">
     $(document).ready(function() {
-    //Ejemplo 1
-    $("#boton").click(function(event) {
-        $("#htmlext").load('ejemplo1.html');
+    //Uncover
+    $("#unc0ver").click(function(event) {
+        $("#htmlext").load('unc0ver.html');
     });
     
-    //Ejemplo 2
-    $("#boton2").click(function(event) {
-        $("#htmlext2").load('ejemplo1.html div#cargar-soloesto');
+    //Electra
+    $("#electramp").click(function(event) {
+        $("#htmlext").load('electramp.html');
     });
     
-    //Ejemplo 3
-    $("#boton3").click(function(event) {
-        $("#phpextget").load('ejemplo2.php',{
-            'var1':'Valor 1',
-            'var2':'Valor 2'
-            });   
-    });
-    
+
     //Reiniciar contenido
     $(".reiniciar").click(function(){
         $(this).next('.recargar').html('Aqui se cargará el contenido');
@@ -44,16 +37,19 @@
  </style>
 </head>
 <body>
+
 <div class="ejemplo">
-    <h2>Cargar un html o php externo</h2>
-    <input type="button" id="boton" value="Cargar html externo"> <input type="button" value="Reiniciar" class="reiniciar">
+    <h2>Search Links IPAS</h2>
+<input type="button" id="unc0ver" value="Unc0ver">
+<input type="button" id="electramp" value="ElectraMP"
+<input type="button" value="Reiniciar" class="reiniciar">
     <div id="htmlext" class="recargar">
 
 
 	<meta http-equiv="content-type" content="text/html">
-	<meta name="author" content="Daniel Manchego">
+	<meta name="SharkApp" content="links">
 
-	<title>Efectos Hover en CSS3, para imagenes con titulos y descripciones</title>
+
  <style>
  
  body{font-family: Arial,serif;}
@@ -162,32 +158,6 @@
 
  </style>
 
- 
-<div class="contenedor-img ejemplo-1">  
-     <img src="imgejemplo.jpg">  
-     <div class="mascara" id="cargar-soloesto">  
-         <h2>Ejemplo 1</h2>  
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae tortor diam  in ullamcorper malesuada.</p>
-         <a href="#" class="link">Leer mas</a>  
-     </div>  
-</div>
- 
-</div>
-</div>
-
-<div class="ejemplo">
-    <h2>Cargar un html o php externo y obtener un contenido especifico</h2>
-    <input type="button" id="boton2" value="Cargar html externo"> <input type="button" value="Reiniciar" class="reiniciar">
-    <div id="htmlext2" class="recargar">Aqui se cargará el contenido</div>
-</div>
-
-<div class="ejemplo">
-    <h2>Cargar un php externo y mandar variables</h2>
-    <input type="button" id="boton3" value="Cargar php"> <input type="button" value="Reiniciar" class="reiniciar">
-    <div id="phpextget" class="recargar">
-            Aqui se cargará el contenido
-    </div>
-</div>
 
 
 
@@ -195,5 +165,7 @@
 
 
 
-</body>
-</html>
+
+
+
+</body></html>
