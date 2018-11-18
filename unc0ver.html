@@ -24,6 +24,12 @@ xmlHttp.onreadystatechange = function() {
 
     document.getElementById('ipa').innerHTML = JSON.parse(xmlHttp.responseText).data.TBAppUrl + "<p>";
 
+document.getElementById('ico').innerHTML = '<img src="' + JSON.parse(xmlHttp.responseText).data.TBAppIcon + '"><p>';
+
+
+
+
+
 }
 
 xmlHttp.open("GET", url, true);
@@ -35,6 +41,8 @@ xmlHttp.send();
 </script>
 
 </b>ipa link: <p>
+<div id="ico"></div>
+
 <div id="ipa"></div>
 
 
