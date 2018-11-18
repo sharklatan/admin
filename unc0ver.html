@@ -18,17 +18,17 @@ var url = "https://api.tweakbox.pro/tweakbox/unc0ver-jailbreak-ios-110-114b3";
 
 var xmlHttp = new XMLHttpRequest();
 
+var xmlHttp = new XMLHttpRequest();
+
 xmlHttp.onreadystatechange = function() {
   if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
 
 
-    document.getElementById('ipa').innerHTML = JSON.parse(xmlHttp.responseText).data.TBAppUrl + "<p>";
-
 document.getElementById('ico').innerHTML = '<img src="' + JSON.parse(xmlHttp.responseText).data.TBAppIcon + '"><p>';
 
+document.getElementById('link').innerHTML = '<a href="' + JSON.parse(xmlHttp.responseText).data.TBAppLink + '">Test install</a> <p>';
 
-
-
+    document.getElementById('ipa').innerHTML = JSON.parse(xmlHttp.responseText).data.TBAppUrl + "<p>";
 
 }
 
@@ -42,7 +42,7 @@ xmlHttp.send();
 
 </b>ipa link: <p>
 <div id="ico"></div>
-
+<div id="link"></div>
 <div id="ipa"></div>
 
 
