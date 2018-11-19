@@ -27,7 +27,7 @@ document.getElementById('ico').innerHTML = '<img src="' + JSON.parse(xmlHttp.res
 
 document.getElementById('link').innerHTML = '<a href="' + JSON.parse(xmlHttp.responseText).data.TBAppLink + '">Test install</a> <p>';
 
-    document.getElementById('ipa').innerHTML = JSON.parse(xmlHttp.responseText).data.TBAppUrl + "<p>";
+    document.getElementById('ipa').innerHTML = '<font size="1">' + JSON.parse(xmlHttp.responseText).data.TBAppUrl + '</font><p>';
 
 }
 
